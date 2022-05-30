@@ -5,7 +5,7 @@ export const addData = (val) => {
 };
 export const getData = () => async (dispatch) => {
   axios
-    .get("http://localhost:8080/add-city/")
+    .get("https://city-country-01.herokuapp.com/add-city/")
     .then((res) => dispatch(addData(res.data)))
     .catch((error) => console.log(error));
 };
