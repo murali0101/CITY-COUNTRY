@@ -9,3 +9,9 @@ export const getData = () => async (dispatch) => {
     .then((res) => dispatch(addData(res.data)))
     .catch((error) => console.log(error));
 };
+export const postCountry = (val) => async (dispatch) => {
+  axios
+    .post("https://city-country-01.herokuapp.com/add-country/",{...val})
+    .then((res) => {console.log(res)} )
+    .catch((error) => console.log(error));
+};
