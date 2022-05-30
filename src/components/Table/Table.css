@@ -1,0 +1,8 @@
+.table-details{
+    margin:20px auto;
+
+}
+table,tr,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
