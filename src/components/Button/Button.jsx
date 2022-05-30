@@ -3,5 +3,5 @@ import "./Button.css";
 
 export const Button = ({ props }) => {
   const nav = useNavigate();
-  return <button onClick={() => {nav(props.link)}}>{props.name}</button>;
+  return <button className="nav-btn" onClick={() => {nav(props.link)}}>{props.name}</button>;
 };
