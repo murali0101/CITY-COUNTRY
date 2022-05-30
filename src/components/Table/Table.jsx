@@ -12,8 +12,9 @@ export const Table = () => {
   const dispatch = useDispatch();
   const populationData = useSelector((store) => store.city_country.city);
   const countryData = useSelector((store) => store.city_country.country);
-  console.log("populationData:", populationData);
-  console.log("countryData:", countryData);
+  const filter = useSelector((store) => store.city_country.filter);
+  // console.log("populationData:", populationData);
+  // console.log("countryData:", countryData);
   useEffect(() => {
     dispatch(getData());
     dispatch(getCountry());
@@ -33,7 +34,7 @@ export const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {populationData.map((ele, ind) => (
+          {populationData.filter((ele)=>ele.city_name.includes(filter)).map((ele, ind) => (
             <TableRow props={{ ele, ind }} key={ind} />
           ))}
         </tbody>
