@@ -43,3 +43,11 @@ export const postcity = (val) => async (dispatch) => {
     })
     .catch((error) => console.log(error));
 };
+export const deletecity = (val) => async (dispatch) => {
+  axios
+    .delete(`https://city-country-01.herokuapp.com/add-city/${val}`,)
+    .then((res) => {
+      dispatch(getData(res.data));
+    })
+    .catch((error) => console.log(error));
+};
