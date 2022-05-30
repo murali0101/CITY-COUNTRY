@@ -2,15 +2,27 @@ import "./AddCity.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useState} from "react";
 import { postcity } from "../../redux/cityCountryReducer/CityCountryAction";
+import { useParams } from "react-router-dom";
 export const AddCity = () => {
   const populationData = useSelector((store) => store.city_country.city);
   const countryData = useSelector((store) => store.city_country.country);
-  const dispatch = useDispatch();
-  const [city, setCity] = useState({
+  const { id } = useParams()
+  let data={
     city_name: "",
     population: "",
     countryId: "",
-  });
+  }
+
+  if (id) { 
+    console.log(id)
+    for (let i = 0; i < populationData.length; i++) { 
+      if (id == populationData[i]._id) { 
+        data= populationData[i]
+      }
+    }
+  }
+  const dispatch = useDispatch();
+  const [city, setCity] = useState({...data});
   const formHandler = (e) => {
     e.preventDefault();
     dispatch(postcity(city));
@@ -39,7 +51,7 @@ export const AddCity = () => {
           onChange={fieldHandler}
           required
         />
-        <select  onChange={fieldHandler}  name="countryId">
+        <select  onChange={fieldHandler}  name="countryId"  value={city.population}>
           {countryData.map((ele, ind) => (
             <option value={ele._id} key={ind}>
               {ele.country_name}
