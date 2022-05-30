@@ -1,6 +1,10 @@
 import axios from "axios";
 export const ADDDATA = "ADDDATA";
 export const ADDCOUNTRY = "ADDCOUNTRY";
+export const SORT= "SORT";
+export const sortData = (val) => {
+  return { type: SORT, payload: val };
+};
 export const addData = (val) => {
   return { type: ADDDATA, payload: val };
 };
@@ -23,16 +27,15 @@ export const postCountry = (val) => async (dispatch) => {
   axios
     .post("https://city-country-01.herokuapp.com/add-country/", { ...val })
     .then((res) => {
-      dispatch(getCountry(res.data))
-      
+      dispatch(getCountry(res.data));
     })
     .catch((error) => console.log(error));
 };
-export const postcity= (val) => async (dispatch) => {
+export const postcity = (val) => async (dispatch) => {
   axios
     .post("https://city-country-01.herokuapp.com/add-city/", { ...val })
     .then((res) => {
-      dispatch(getData(res.data))
+      dispatch(getData(res.data));
     })
     .catch((error) => console.log(error));
 };
