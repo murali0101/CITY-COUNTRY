@@ -2,6 +2,10 @@ import axios from "axios";
 export const ADDDATA = "ADDDATA";
 export const ADDCOUNTRY = "ADDCOUNTRY";
 export const SORT= "SORT";
+export const FILTER= "FILTER";
+export const filterData = (val) => {
+  return { type: FILTER, payload: val };
+};
 export const sortData = (val) => {
   return { type: SORT, payload: val };
 };
