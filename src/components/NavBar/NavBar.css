@@ -1,4 +1,7 @@
 .nav-bar{
     background-color: rgb(241, 182, 93);
-    padding: 10px 20px;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 10px;
 }
