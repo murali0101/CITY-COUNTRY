@@ -23,7 +23,8 @@ export const postCountry = (val) => async (dispatch) => {
   axios
     .post("https://city-country-01.herokuapp.com/add-country/", { ...val })
     .then((res) => {
-      console.log(res);
+      dispatch(getCountry(res.data))
+      
     })
     .catch((error) => console.log(error));
 };
