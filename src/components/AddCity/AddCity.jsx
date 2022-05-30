@@ -19,7 +19,7 @@ export const AddCity = () => {
     const { name, value } = e.target;
     setCity({ ...city, [name]: value });
   };
-  console.log(city);
+  // console.log(city);
   return (
     <div className="add-city">
       <form onSubmit={formHandler}>
