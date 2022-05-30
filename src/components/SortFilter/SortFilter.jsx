@@ -8,14 +8,15 @@ export const SortFilter = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <select>
+      {/* <select id="filter">
         <option value="country">Country</option>
         <option value="city">City</option>
-      </select>
+      </select> */}
       <input
         type="text"
-        placeholder="Please Enter Name"
+        placeholder="Please Enter Country Name"
         onChange={(e) => {
+        //   const val = document.getElementById("filter").value;
           dispatch(filterData(e.target.value));
         }}
       />
