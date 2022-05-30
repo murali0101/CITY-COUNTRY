@@ -8,8 +8,8 @@ export const Table = () => {
   const dispatch = useDispatch();
   const populationData = useSelector((store) => store.city_country.city);
   const countryData = useSelector((store) => store.city_country.country);
-  console.log("populationData:", populationData);
-  console.log("countryData:", countryData);
+  // console.log("populationData:", populationData);
+  // console.log("countryData:", countryData);
   useEffect(() => {
     dispatch(getData());
     dispatch(getCountry());
