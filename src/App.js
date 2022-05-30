@@ -14,6 +14,9 @@ function App() {
         <Route path="/" element={<Table />}>
           {" "}
         </Route>
+        <Route path="/edit-city/:id" element={<AddCity />}>
+          {" "}
+        </Route>
         <Route path="/add-city" element={<AddCity />}>
           {" "}
         </Route>
