@@ -14,7 +14,7 @@ export const AddCountry = () => {
     const { name, value } = e.target;
     setCountry({ ...country, [name]: value });
   };
-  console.log(country);
+  // console.log(country);
   return (
     <div>
       <form onSubmit={formHandler}>
