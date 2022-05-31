@@ -1,0 +1,13 @@
+.sort-filter {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+.asc-des,
+.sort,
+.filter {
+  font-size: 18px;
+}
+.filter{
+    width: 18vw;
+}
