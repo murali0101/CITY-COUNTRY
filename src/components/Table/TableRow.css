@@ -1,0 +1,17 @@
+.tr-btn {
+    cursor: pointer;
+    background-color: #1f2937;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 3px 16px;
+    border-radius: 6px;
+    border: 0px;
+    margin: 2px auto;
+  }
+  .tr-btn:hover {
+    opacity: 0.8;
+    transition: 500ms;
+    
+  }
+  
