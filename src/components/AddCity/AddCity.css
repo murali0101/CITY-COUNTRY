@@ -1,0 +1,11 @@
+.add-city {
+    display: flex;
+    justify-content: center;
+    row-gap: 20px;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+.add-city input ,.add-city select{
+   font-size: 18px;
+  }
