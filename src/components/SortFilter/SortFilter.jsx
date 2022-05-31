@@ -1,3 +1,4 @@
+import './SortFilter.css'
 import { useDispatch } from "react-redux";
 import {
   filterData,
@@ -7,12 +8,12 @@ import {
 export const SortFilter = () => {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="sort-filter">
       {/* <select id="filter">
         <option value="country">Country</option>
         <option value="city">City</option>
       </select> */}
-      <input
+      <input className="filter"
         type="text"
         placeholder="Please Enter Country Name"
         onChange={(e) => {
@@ -21,7 +22,7 @@ export const SortFilter = () => {
         }}
       />
       <select
-        id="sort"
+        id="sort" className="sort"
         onChange={(e) => {
           const val = document.getElementById("asc-des").value;
           dispatch(sortData([e.target.value, val]));
@@ -31,7 +32,7 @@ export const SortFilter = () => {
         <option value="city_name">City</option>
         <option value="population">Population</option>
       </select>
-      <select
+      <select className="asc-des"
         id="asc-des"
         onChange={(e) => {
           const val = document.getElementById("sort").value;
