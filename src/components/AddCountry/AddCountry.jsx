@@ -9,6 +9,7 @@ export const AddCountry = () => {
   const formHandler = (e) => {
     e.preventDefault();
     dispatch(postCountry(country));
+    alert("country added")
   };
   const fieldHandler = (e) => {
     const { name, value } = e.target;
@@ -17,7 +18,7 @@ export const AddCountry = () => {
   // console.log(country);
   return (
     <div>
-      <form onSubmit={formHandler}>
+      <form  className="add-country" onSubmit={formHandler}>
         <input
           value={country.country_name}
           type="text"
