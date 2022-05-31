@@ -14,8 +14,8 @@ export const TableRow = ({ props }) => {
         <td>{country_name}</td>
         <td>{city_name}</td>
         <td>{population}</td>
-        <td><button onClick={() => { nav(`/edit-city/${_id}`) }}>Edit</button></td>
-        <td><button onClick={() => {
+        <td><button className='tr-btn' onClick={() => { nav(`/edit-city/${_id}`) }}>Edit</button></td>
+        <td><button className='tr-btn' onClick={() => {
             dispatch(deletecity(_id))
             alert("Delete Successfully")
         }}>Delete</button></td>
