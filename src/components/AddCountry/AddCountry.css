@@ -1,0 +1,11 @@
+.add-country {
+    display: flex;
+    justify-content: center;
+    row-gap: 20px;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+  }
+.add-country input {
+   font-size: 18px;
+  }
