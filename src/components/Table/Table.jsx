@@ -34,7 +34,7 @@ export const Table = () => {
           </tr>
         </thead>
         <tbody>
-          {populationData.filter((ele)=>ele.countryId.country_name.includes(filter)).map((ele, ind) => (
+          {populationData.filter((ele)=>ele.countryId.country_name.toLowerCase().includes(filter)).map((ele, ind) => (
             <TableRow props={{ ele, ind }} key={ind} />
           ))}
         </tbody>
