@@ -52,8 +52,8 @@ export const deletecity = (val) => async (dispatch) => {
     .catch((error) => console.log(error));
 };
 export const patchcity = (val) => async (dispatch) => {
-  console.log(val[0],"kkkk")
-  console.log(val[1],"kkkk")
+  // console.log(val[0],"kkkk")
+  // console.log(val[1],"kkkk")
   axios
     .patch(`https://city-country-01.herokuapp.com/add-city/${val[0]}`,{...val[1]})
     .then((res) => {
