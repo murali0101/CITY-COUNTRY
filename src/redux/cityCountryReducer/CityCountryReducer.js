@@ -20,14 +20,14 @@ export const CityCountryReducer = (store = init, { type, payload }) => {
         ...store,
         city: [...store.city].sort((a, b) =>
           payload[1] == "asc"
-            ? a[payload[0]] > b[payload[0]]
+            ? a[payload[0]].toLowerCase() > b[payload[0]].toLowerCase()
               ? 1
-              : a[payload[0]] < b[payload[0]]
+              : a[payload[0]].toLowerCase() < b[payload[0]].toLowerCase()
               ? -1
               : 0
-            : a[payload[0]] < b[payload[0]]
+            : a[payload[0]].toLowerCase()< b[payload[0]].toLowerCase()
             ? 1
-            : a[payload[0]] > b[payload[0]]
+            : a[payload[0]].toLowerCase()> b[payload[0]].toLowerCase()
             ? -1
             : 0
         ),
