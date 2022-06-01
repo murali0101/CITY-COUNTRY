@@ -15,7 +15,7 @@ export const AddCity = () => {
 
   
   if (id) { 
-    console.log(id)
+    // console.log(id)
     for (let i = 0; i < populationData.length; i++) { 
       if (id == populationData[i]._id) { 
         // console.log({...populationData[i],countryId:populationData[i].countryId._id})
